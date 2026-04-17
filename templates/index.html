@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop your files, pick them up anywhere</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1 class="logo">Drop.</h1>
+            <p class="subtitle">Share files cleanly and easily :)</p>
+        </div>
+
+        <div id="upload-area" class="upload-area">
+                <input type="file" id="file-input" hidden>
+                <div class="upload-content">
+                    <span class="upload-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                    </span>
+                    <span class="upload-text">Select or drop a file</span>
+                </div>
+        </div>
+
+
+        <div id="progress-section" class="progress-section hidden">
+                <div class="progress-info">
+                    <span id="uploading-name" class="file-name"></span>
+                    <span id="uploading-percent" class="percent">0%</span>
+                </div>
+
+                <div class="progress-bar-bg">
+                    <div id="progress-bar" class="progress-bar-fill"></div>
+                </div>
+        </div>
+
+
+        <div id="result-section" class="result-section hidden">
+                <div class="result-info">
+                    <span id="result-filename" class="file-name"></span>
+                    <span id="result-size" class="file-size"></span>
+                </div>
+
+                <div class="share-group">
+                    <label class="share-label">Global Link</label>
+                    <div class="share-input-group">
+                        <input type="text" id="share-url-host" readonly class="share-input">
+                        <button class="copy-btn" data-target="share-url-host">Copy</button>
+                    </div>
+                </div>
+
+                <div class="share-group">
+                    <label class="share-label">Local Link</label>
+                    <div class="share-input-group">
+                        <input type="text" id="share-url-local" readonly class="share-input">
+                        <button class="copy-btn" data-target="share-url-local">Copy</button>
+                    </div>
+                </div>
+
+                <button id="upload-another" class="reset-btn">New upload</button>
+        </div>
+
+    </main>
+
+    <script src="/static/script.js"></script>
+
+
+</body>
+</html>
